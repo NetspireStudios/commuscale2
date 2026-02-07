@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Commuscale - Unleash Your Impact</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&amp;family=Syne:wght@700;800&amp;family=Bungee&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF00FF", // Bright Pink
+                        secondary: "#7000FF", // Vibrant Purple
+                        "background-light": "#FDF9FF",
+                        "background-dark": "#0A0118",
+                    },
+                    fontFamily: {
+                        display: ["Bungee", "cursive"],
+                        accent: ["Syne", "sans-serif"],
+                        body: ["Space Grotesk", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0px",
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        .neo-shadow {
+            box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+        }
+        .neo-shadow-lg {
+            box-shadow: 12px 12px 0px 0px rgba(0,0,0,1);
+        }
+        .neo-shadow-pink {
+            box-shadow: 6px 6px 0px 0px #FF00FF;
+        }
+        .neo-shadow-purple {
+            box-shadow: 6px 6px 0px 0px #7000FF;
+        }
+        .dot-pattern {
+            background-image: radial-gradient(#FF00FF 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(112, 0, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(112, 0, 255, 0.1) 1px, transparent 1px);
+        }
+        .brutalist-border {
+            border: 4px solid black;
+        }
+        .slanted-text {
+            transform: skewY(-2deg);
+        }
+        .sticker-badge {
+            @apply border-4 border-black px-4 py-2 font-display uppercase text-sm inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)];
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-black dark:text-white font-body selection:bg-primary selection:text-white overflow-x-hidden">
+<nav class="sticky top-0 z-[100] px-4 md:px-6 py-4 md:py-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between brutalist-border bg-white dark:bg-gray-900 px-4 md:px-8 py-4 neo-shadow relative bg-white">
+            <div class="font-display text-2xl md:text-3xl tracking-tighter text-secondary">COMMUSCALE</div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-10 font-accent font-extrabold uppercase text-sm tracking-widest">
+                <a class="hover:text-primary transition-colors" href="#magic">Our Magic</a>
+                <a class="hover:text-primary transition-colors" href="#sparks">Growth Sparks</a>
+                <a class="hover:text-primary transition-colors" href="#collaborate">Let's Play</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a class="hidden md:block bg-primary hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all px-8 py-3 font-accent font-extrabold text-sm brutalist-border neo-shadow-purple" href="#collaborate">
+                    START SCALING
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 brutalist-border neo-shadow-purple bg-white active:translate-y-1 transition-transform">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-4 right-4 mt-2 bg-white dark:bg-gray-900 brutalist-border neo-shadow p-6 flex flex-col space-y-6 font-accent font-extrabold uppercase text-lg tracking-widest z-[101]">
+            <a class="hover:text-primary transition-colors border-b-2 border-black pb-2" href="#magic" onclick="toggleMenu()">Our Magic</a>
+            <a class="hover:text-primary transition-colors border-b-2 border-black pb-2" href="#sparks" onclick="toggleMenu()">Growth Sparks</a>
+            <a class="hover:text-primary transition-colors border-b-2 border-black pb-2" href="#collaborate" onclick="toggleMenu()">Let's Play</a>
+            <a class="bg-primary text-center hover:bg-black hover:text-white transition-all px-8 py-4 brutalist-border neo-shadow-purple" href="#collaborate" onclick="toggleMenu()">
+                START SCALING
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        function toggleMenu() {
+            menu.classList.toggle('hidden');
+        }
+
+        btn.addEventListener('click', toggleMenu);
+    </script>
+<header class="relative pt-10 pb-20 px-4 md:pt-20 md:pb-40 md:px-6 grid-pattern overflow-visible">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center relative">
+            <div class="lg:col-span-7 relative z-20">
+                <div class="inline-block bg-secondary text-white px-4 py-2 md:px-6 font-accent font-black text-xs md:text-sm mb-6 md:mb-8 brutalist-border neo-shadow -rotate-2">
+                    AGGRESSIVELY CREATIVE ⚡
+                </div>
+                <h1 class="font-display text-5xl md:text-7xl lg:text-9xl leading-[0.9] md:leading-[0.85] mb-8 md:mb-12 slanted-text uppercase tracking-tighter">
+                    UNLEASH <br/>
+                    <span class="text-secondary bg-white inline-block px-2 md:px-4 brutalist-border mt-2">YOUR</span> <br/>
+                    <span class="text-primary italic">IMPACT.</span>
+                </h1>
+                <p class="text-lg md:text-2xl max-w-xl mb-8 md:mb-12 font-bold leading-tight">
+                    Stop being a best-kept secret. We turn <span class="bg-primary/20 px-1">visionary chaos</span> into high-performance revenue engines for creators who mean business.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 md:gap-8 items-start sm:items-center">
+                    <button class="bg-black dark:bg-white dark:text-black text-white px-8 py-4 md:px-10 md:py-6 text-xl md:text-3xl font-display neo-shadow-pink hover:translate-x-2 hover:translate-y-2 hover:shadow-none transition-all uppercase brutalist-border w-full sm:w-auto">
+                        SPARK GROWTH
+                    </button>
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-secondary text-4xl md:text-5xl">auto_fix_high</span>
+                        <p class="text-sm font-black leading-none uppercase">Scale without<br/>selling your soul</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative min-h-[350px] md:min-h-[500px] flex items-center justify-center mt-10 lg:mt-0">
+                <div class="relative z-10 transition-transform hover:scale-105 duration-500">
+                    <span class="material-symbols-outlined text-[180px] sm:text-[240px] md:text-[280px] lg:text-[380px] text-secondary filter drop-shadow-[6px_6px_0px_#FF00FF] md:drop-shadow-[10px_10px_0px_#FF00FF]">
+                        rocket_launch
+                    </span>
+                    <div class="absolute -top-6 right-0 md:-top-10 md:-right-4 sticker-badge bg-white rotate-12 text-xs md:text-sm">
+                        #1 Impact Agency
+                    </div>
+                    <div class="absolute top-1/2 -left-4 md:-left-20 sticker-badge bg-primary text-white -rotate-6 text-xs md:text-sm">
+                        Zero Boredom
+                    </div>
+                    <div class="absolute -bottom-4 right-4 md:-bottom-6 md:right-10 sticker-badge bg-black text-white rotate-3 text-xs md:text-sm">
+                        Scale Fast
+                    </div>
+                    <span class="material-symbols-outlined absolute top-0 left-0 text-primary text-3xl md:text-5xl animate-pulse">auto_awesome</span>
+                    <span class="material-symbols-outlined absolute bottom-20 -right-4 md:-right-10 text-secondary text-4xl md:text-6xl">grade</span>
+                    <span class="material-symbols-outlined absolute top-20 right-0 text-black dark:text-white text-2xl md:text-4xl">flare</span>
+                    <span class="material-symbols-outlined absolute bottom-0 -left-4 md:-left-10 text-primary text-3xl md:text-5xl">bolt</span>
+                    <div class="absolute -top-10 md:-top-20 left-0 md:left-10 w-24 md:w-32 p-2 md:p-3 bg-white brutalist-border neo-shadow rotate-[-15deg] hidden sm:block">
+                        <div class="text-[8px] md:text-[10px] font-black uppercase mb-1">Status:</div>
+                        <div class="text-[10px] md:text-xs font-bold text-secondary">READY FOR TAKEOFF</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<section class="py-16 md:py-24 bg-white dark:bg-gray-900 dot-pattern border-y-8 border-black" id="magic">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-20">
+                <div class="inline-block relative">
+                    <h2 class="font-display text-4xl md:text-6xl lg:text-8xl mb-4 slanted-text uppercase">GROWTH SPARKS</h2>
+                    <div class="absolute -top-8 -right-8 md:-top-12 md:-right-12 text-primary">
+                        <span class="material-symbols-outlined text-5xl md:text-7xl">energy_savings_leaf</span>
+                    </div>
+                </div>
+                <p class="font-accent font-black tracking-[0.2em] md:tracking-[0.3em] text-secondary uppercase text-sm md:text-lg">Weaponizing your unique genius</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12 mt-8 md:mt-0">
+                <div class="relative group">
+                    <div class="absolute -top-6 -left-2 md:-top-8 md:-left-6 w-12 h-12 md:w-16 md:h-16 bg-secondary text-white font-display text-xl md:text-2xl flex items-center justify-center brutalist-border z-10 neo-shadow">01</div>
+                    <div class="bg-white dark:bg-gray-800 brutalist-border p-6 md:p-10 pt-12 md:pt-16 neo-shadow group-hover:-translate-y-4 transition-transform h-full border-b-[12px] md:border-b-[16px] border-b-primary">
+                        <h3 class="font-display text-xl md:text-2xl mb-4 md:mb-6 uppercase leading-tight">The Echo Chamber</h3>
+                        <p class="text-base md:text-lg font-medium opacity-80 mb-6 md:mb-8 leading-snug">Algorithm noise making you feel invisible? We don't just "post", we create ripples that turn into tidal waves.</p>
+                        <hr class="border-4 border-black dark:border-white mb-6"/>
+                        <div class="flex items-center gap-3 text-primary font-black text-xs md:text-sm uppercase tracking-widest">
+                            <span class="material-symbols-outlined">campaign</span> RECLAIM REACH
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -top-6 -left-2 md:-top-8 md:-left-6 w-12 h-12 md:w-16 md:h-16 bg-primary text-white font-display text-xl md:text-2xl flex items-center justify-center brutalist-border z-10 neo-shadow">02</div>
+                    <div class="bg-white dark:bg-gray-800 brutalist-border p-6 md:p-10 pt-12 md:pt-16 neo-shadow group-hover:-translate-y-4 transition-transform h-full border-b-[12px] md:border-b-[16px] border-b-secondary">
+                        <h3 class="font-display text-xl md:text-2xl mb-4 md:mb-6 uppercase leading-tight">The Hustle Trap</h3>
+                        <p class="text-base md:text-lg font-medium opacity-80 mb-6 md:mb-8 leading-snug">Trading hours for dollars? We design "Flywheels" that nurture your community while you focus on the creative sparks.</p>
+                        <hr class="border-4 border-black dark:border-white mb-6"/>
+                        <div class="flex items-center gap-3 text-secondary font-black text-xs md:text-sm uppercase tracking-widest">
+                            <span class="material-symbols-outlined">refresh</span> EVERGREEN IMPACT
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -top-6 -left-2 md:-top-8 md:-left-6 w-12 h-12 md:w-16 md:h-16 bg-black dark:bg-white dark:text-black text-white font-display text-xl md:text-2xl flex items-center justify-center brutalist-border z-10 neo-shadow">03</div>
+                    <div class="bg-white dark:bg-gray-800 brutalist-border p-6 md:p-10 pt-12 md:pt-16 neo-shadow group-hover:-translate-y-4 transition-transform h-full border-b-[12px] md:border-b-[16px] border-b-black dark:border-b-white">
+                        <h3 class="font-display text-xl md:text-2xl mb-4 md:mb-6 uppercase leading-tight">The Tech Maze</h3>
+                        <p class="text-base md:text-lg font-medium opacity-80 mb-6 md:mb-8 leading-snug">Drowning in messy tools? We simplify the chaos into a streamlined "Creative Playground" that actually works.</p>
+                        <hr class="border-4 border-black dark:border-white mb-6"/>
+                        <div class="flex items-center gap-3 text-black dark:text-white font-black text-xs md:text-sm uppercase tracking-widest">
+                            <span class="material-symbols-outlined">bolt</span> EASY FLOW
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="py-16 md:py-32 overflow-hidden" id="sparks">
+        <div class="max-w-5xl mx-auto px-4 md:px-6">
+            <div class="mb-12 md:mb-24 text-center">
+                <span class="bg-black text-white px-4 py-2 md:px-6 font-accent font-black text-sm md:text-lg uppercase tracking-tighter inline-block mb-4 md:mb-6 brutalist-border">THE COLLAB FLOW</span>
+                <h2 class="font-display text-4xl md:text-6xl lg:text-8xl slanted-text">GROWING <span class="text-secondary italic">TOGETHER.</span></h2>
+            </div>
+            <div class="space-y-12 md:space-y-16">
+                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12 group">
+                    <div class="w-16 h-16 md:w-24 md:h-24 bg-primary text-white brutalist-border font-display text-2xl md:text-4xl flex items-center justify-center shrink-0 neo-shadow rotate-3">1</div>
+                    <div class="flex-grow bg-white dark:bg-gray-800 brutalist-border p-6 md:p-10 neo-shadow-purple w-full">
+                        <h4 class="font-display text-2xl md:text-3xl text-secondary mb-2 md:mb-4 uppercase">Discovery Session</h4>
+                        <p class="text-lg md:text-xl opacity-70 font-bold">We dive deep into your vision, finding the sparks that make your message unique and ready for world-building.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-12 group">
+                    <div class="w-16 h-16 md:w-24 md:h-24 bg-secondary text-white brutalist-border font-display text-2xl md:text-4xl flex items-center justify-center shrink-0 neo-shadow -rotate-6">2</div>
+                    <div class="flex-grow bg-white dark:bg-gray-800 brutalist-border p-6 md:p-10 neo-shadow-pink w-full">
+                        <h4 class="font-display text-2xl md:text-3xl text-primary mb-2 md:mb-4 uppercase">Infrastructure Joy</h4>
+                        <p class="text-lg md:text-xl opacity-70 font-bold text-left md:text-right">Setting up the automated magic so you can focus on being the brilliant creative you actually are.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12 group">
+                    <div class="w-16 h-16 md:w-24 md:h-24 bg-black text-white brutalist-border font-display text-2xl md:text-4xl flex items-center justify-center shrink-0 neo-shadow rotate-6">3</div>
+                    <div class="flex-grow bg-white dark:bg-gray-800 brutalist-border p-6 md:p-10 neo-shadow w-full">
+                        <h4 class="font-display text-2xl md:text-3xl text-black dark:text-white mb-2 md:mb-4 uppercase">Community Lift</h4>
+                        <p class="text-lg md:text-xl opacity-70 font-bold">Engaging your audience and turning followers into a vibrant, thriving, and self-sustaining ecosystem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-black text-white py-16 md:py-24 px-4 md:px-6 border-y-8 border-primary">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="font-display text-2xl md:text-4xl text-center mb-12 md:mb-20 uppercase tracking-widest">Sparks We've Ignited</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12">
+                <div class="brutalist-border border-white p-6 md:p-10 text-center group hover:bg-primary hover:text-black transition-all">
+                    <div class="font-display text-4xl md:text-5xl mb-2 md:mb-4">3.4X</div>
+                    <div class="text-[10px] md:text-xs font-black uppercase tracking-widest opacity-80">Value Multiplier</div>
+                </div>
+                <div class="brutalist-border border-white p-6 md:p-10 text-center group hover:bg-secondary hover:text-black transition-all">
+                    <div class="font-display text-4xl md:text-5xl mb-2 md:mb-4">82%</div>
+                    <div class="text-[10px] md:text-xs font-black uppercase tracking-widest opacity-80">Fan Devotion</div>
+                </div>
+                <div class="brutalist-border border-white p-6 md:p-10 text-center group hover:bg-white hover:text-black transition-all">
+                    <div class="font-display text-4xl md:text-5xl mb-2 md:mb-4 flex justify-center">
+                        <span class="material-symbols-outlined text-5xl md:text-6xl">all_inclusive</span>
+                    </div>
+                    <div class="text-[10px] md:text-xs font-black uppercase tracking-widest opacity-80">Creative Freedom</div>
+                </div>
+                <div class="brutalist-border border-white p-6 md:p-10 text-center group hover:bg-primary hover:text-black transition-all">
+                    <div class="font-display text-4xl md:text-5xl mb-2 md:mb-4">ZERO</div>
+                    <div class="text-[10px] md:text-xs font-black uppercase tracking-widest opacity-80">Tech Stress</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-secondary relative py-20 md:py-40 px-4 md:px-6 overflow-hidden" id="collaborate">
+        <div class="absolute -top-20 -right-20 opacity-30 hidden md:block">
+            <span class="material-symbols-outlined text-[400px] text-white rotate-12">rocket_launch</span>
+        </div>
+        <div class="absolute -bottom-20 -left-20 opacity-30 hidden md:block">
+            <span class="material-symbols-outlined text-[400px] text-white -rotate-12">electric_bolt</span>
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="bg-black inline-block p-8 md:p-16 lg:p-24 brutalist-border neo-shadow-pink mb-10 md:mb-16 -rotate-2">
+                <h2 class="font-display text-3xl md:text-5xl lg:text-8xl leading-[0.9] text-white uppercase slanted-text">
+                    Let's make <br/>
+                    something <br/>
+                    real
+                </h2>
+            </div>
+            <p class="text-white text-xl md:text-3xl font-black mb-10 md:mb-16 max-w-2xl mx-auto leading-tight">
+                Ready to unleash your impact? We're taking on a few more visionaries this month.
+            </p>
+            <button class="bg-white text-black px-8 py-4 md:px-12 md:py-8 text-xl md:text-3xl font-display brutalist-border neo-shadow hover:bg-primary hover:text-white transition-all uppercase inline-flex items-center gap-4 md:gap-6 w-full md:w-auto justify-center">
+                Apply Now <span class="material-symbols-outlined text-3xl md:text-4xl">arrow_forward</span>
+            </button>
+            <div class="mt-20 md:mt-32 flex flex-col items-center">
+                <div class="flex gap-6 md:gap-8 mb-8 md:mb-10">
+                    <a class="w-12 h-12 md:w-16 md:h-16 bg-white brutalist-border flex items-center justify-center hover:bg-primary transition-colors neo-shadow" href="#">
+                        <img alt="Twitter X" class="w-6 h-6 md:w-8 md:h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPp7IYQz495agyym4waow6fOG5L55hBe3xHEvnqJcDt0w12B5CHrzca5l-MKaWztm80734pJy-VSO9MR204yG1DXpXLDdcpBrDBANZm4P9RYXSpY3IK_HRpx00bQLHOeM3gu35MdEDqshHB6QnReqHdsCHTiNyZuhITjFaduNrlJ0YVD1jYh0cjeSLpxsM0V44qzZtf9_D4TBQrSnl6jnhOMSVHs7kBmhRyKsuuXZmD-2AoOEFUNUNo797wgm6fU68CZ-d-LH5qBla"/>
+                    </a>
+                    <a class="w-12 h-12 md:w-16 md:h-16 bg-white brutalist-border flex items-center justify-center hover:bg-primary transition-colors neo-shadow" href="#">
+                        <img alt="Instagram" class="w-6 h-6 md:w-8 md:h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIqWe_aS33lYHnqu1ZcT19LMNwbn54JyO4q06K-KM_mTBST8bbwxNHnQSi3h5qQ2I7QaNMR-ZO0ZzIEbpsxXyhXdK34Or9C_Wn2EZBqH7x14Ocv2xNlseGVemCaRaQupxAXjKSgfMyuBG6Ii8ca-8CPbFX05Cu4TxCoJEKZyVYkkP9_H0qAOLOf4W2ZIBh1igZJiawMlT0Fq9ES5Y5113JyV4TqqQ3dkdw1Pw9aywcjPVGCvw8HHqksa6JuCG1TlorvBkmpxanhRxq"/>
+                    </a>
+                    <a class="w-12 h-12 md:w-16 md:h-16 bg-white brutalist-border flex items-center justify-center hover:bg-primary transition-colors neo-shadow" href="#">
+                        <img alt="LinkedIn" class="w-6 h-6 md:w-8 md:h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE30WXdf--XiwcRvFazAA8re-V_Lqj9HtEkAdW6PHuo251YOF4aho2ILu_X904pqQM_ZFfjyto7BH3UsIgGSlmOVGLTLsOjSqr9I3u4OGXKAR0KvcPuUk9Lls1tW3PIZT7nfcce7PqMSNaqES8g9Xd-h_SYuekpedhlq2bK-Kfg10xq2H2eZMNLBBBJRd7J8XgQ8roqgh9Hmv52A9udw9-Z-mbF6PmRbumCpqS8evatEp-XfIU31rTzOlEjoKLrnKSTopVCJiejbq6"/>
+                    </a>
+                </div>
+                <p class="text-white font-black uppercase text-xs md:text-sm tracking-[0.2em] md:tracking-[0.4em]">
+                    Commuscale Creative Agency © 2024 • Build Movements
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body></html>
